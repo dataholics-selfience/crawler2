@@ -1,12 +1,11 @@
-﻿{
+{
   "name": "generic-crawler-platform",
   "version": "1.0.0",
   "description": "Generic Crawler Platform for Patents and Data Extraction",
   "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
-    "dev": "nodemon src/app.js",
-    "test": "echo \"No tests yet\" && exit 0"
+    "dev": "nodemon src/app.js"
   },
   "keywords": ["crawler", "scraping", "patents", "inpi", "groq"],
   "author": "Dataholics Selfience",

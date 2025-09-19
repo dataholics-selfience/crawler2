@@ -26,7 +26,7 @@ logger.info(`INPI: Trying ${strategy} strategy for: ${searchTerm}`);
           return await this.searchWithPuppeteer(searchTerm, options);
         }
       } catch (error) {
-        logger.warn(INPI:  strategy failed:, error.message);
+logger.warn(`INPI: ${strategy} strategy failed:`, error.message);
         
         if (strategy === strategies[strategies.length - 1]) {
           throw new Error(All strategies failed for INPI search: );
@@ -183,4 +183,5 @@ Return as JSON array. If no results found, return empty array.;
 }
 
 module.exports = INPICrawler;
+
 

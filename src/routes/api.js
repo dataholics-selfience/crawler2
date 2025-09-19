@@ -25,7 +25,7 @@ router.get('/inpi/patents', async (req, res) => {
       });
     }
 
-    logger.info(INPI API request: );
+logger.info(`INPI API request: ${medicine}`);
 
     const inpiCrawler = new INPICrawler();
     const results = await inpiCrawler.searchPatents(medicine);
@@ -62,3 +62,4 @@ router.get('/docs', (req, res) => {
 });
 
 module.exports = router;
+

@@ -18,7 +18,7 @@ class INPICrawler extends BaseCrawler {
     
     for (const strategy of strategies) {
       try {
-        logger.info(INPI: Trying  strategy for: );
+logger.info(`INPI: Trying ${strategy} strategy for: ${searchTerm}`);
         
         if (strategy === 'requests') {
           return await this.searchWithRequests(searchTerm, options);
@@ -183,3 +183,4 @@ Return as JSON array. If no results found, return empty array.;
 }
 
 module.exports = INPICrawler;
+

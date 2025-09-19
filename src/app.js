@@ -6,7 +6,7 @@ const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
 require('dotenv').config();
 
-const { sequelize } = require('./config/database');
+// const { sequelize } = require('./config/database');
 const logger = require('./utils/logger');
 const errorHandler = require('./middleware/errorHandler');
 const apiRoutes = require('./routes/api');
@@ -59,7 +59,7 @@ app.use('*', (req, res) => {
 
 async function startServer() {
   try {
-    await sequelize.authenticate();
+// await sequelize.authenticate();
     console.log('Database connected successfully');
     
     app.listen(PORT, () => {
@@ -72,4 +72,5 @@ console.log(`🚀 Server running on port ${PORT}`);    });
 
 startServer();
 module.exports = app;
+
 
